@@ -1,7 +1,7 @@
 ??? Proposal
 =============
 
-September 30, 2015
+*September 30, 2015*
 
 Team
 -------------
