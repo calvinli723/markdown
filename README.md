@@ -1,4 +1,4 @@
-# ??? Proposal
+??? Proposal
 =============
 
 **September 30, 2015**
