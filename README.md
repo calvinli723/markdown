@@ -59,9 +59,9 @@ Functions have return values and parameters. They are defined with the keyword â
 ```
 
 ### Built-in Functions
-- **draw**(lsys L) - generates a static fractal image
-- **grow**(lsys L) - generates a gif of the fractal being created
-- **zoom**(lsys L) - generates a (seemingly infinite) zooming gif of the fractal
+- **draw** (lsys L) - generates a static fractal image
+- **grow** (lsys L) - generates a gif of the fractal being created
+- **zoom** (lsys L) - generates a (seemingly infinite) zooming gif of the fractal
 
 ### Comments
 Just like in Java - // for single line and /* */ for multi line comments.
