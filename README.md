@@ -5,7 +5,7 @@
 
 Team
 -------------
-- **Manager** Annie Zhang, az2350
+- **Manager** Anne Zhang, az2350
 - **Language Guru** Calvin Li, ctl2124
 - **Systems Architect** Justin Chiang, jc4127
 - **Tester** Kunal Kamath, kak2211
@@ -25,12 +25,14 @@ Syntax
 -------------
 ### Declaration/Assignment
 Variables are declared and assigned in the same syntax as Java.
+```
     int a;
     a = 0;
     int b = 1;
+```
 
 ### Data Types
-- 
+
 
 ### Control Flow
 
@@ -43,4 +45,3 @@ Applications
 
 Sample Programs
 -------------
-
