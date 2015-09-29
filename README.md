@@ -34,17 +34,17 @@ Variables are declared and assigned in the same syntax as Java.
 ```
 
 ### Data Types
-**int**: an integer of 32 bits
-**double**: a floating point number of 64 bits
-**bool**: a true or false value
-**string**: a collection of characters/symbols
-**rule**: a standard object composed of 2 fields
-- a *predecessor* string and
-- a *successor* string
-**lsys**: a standard object composed of three fields
-- a set called an *alphabet*
-- an *axiom* string
-- a second set called *rules*
+- **int**: an integer of 32 bits
+- **double**: a floating point number of 64 bits
+- **bool**: a true or false value
+- **string**: a collection of characters/symbols
+- **rule**: a standard object composed of 2 fields
+ - a *predecessor* string and
+ - a *successor* string
+- **lsys**: a standard object composed of three fields
+ - a set called an *alphabet*
+ - an *axiom* string
+ - a second set called *rules*
 
 ### Operators
 
