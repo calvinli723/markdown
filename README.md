@@ -12,7 +12,7 @@ Team
 
 Description
 -------------
-Our language enables the user to generate fractals in the Graphics Interchange Format, commonly abbreviated as GIF. Specifically, the user will be able to program a fractal using a formal grammar, as well as incorporate algorithms into the fractal generation.
+Our language enables the user to generate fractals in the Graphics Interchange Format, commonly abbreviated as GIF. Specifically, the user will be able to program a fractal using a formal grammar, as well as incorporate algorithms into their fractal generation.
 
 We define our fractal-generating grammars as:
 ```
