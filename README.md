@@ -117,6 +117,8 @@ main() {
 }
 ```
 
+![what does this text do](/snowflake.png)
+
 ### Polyzygotic snowflakes
 ```
 /*
@@ -146,3 +148,5 @@ main() {
   draw(twin(koch, 2), 4);
 }
 ```
+
+![what does this text do](/triplet-snowflake.png)
