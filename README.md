@@ -16,17 +16,17 @@ Our language enables the user to generate fractals in the Graphics Interchange F
 
 We define L-system grammars as a tuple:
 ```
-    L = (variables, init, rules)
+    L = (alphabet, axiom, rules)
 ```
 where
-- **variables**:  a set of symbols containing non-terminal elements
-- **init**: a string of symbols from alphabet that defines the initial state of the system
-- **rules**: a set of rules that defines the way variable can be replaced with combinations of constants and other variables. Constants are defined within the rules, and they are terminal.
+
+- **init**: a string that defines the initial state of the system
+- **rules**: a set of rules that defines the way variables are replaced with combinations of variables and movements during the recursion. Each rule has two halves to it, separated by an arrow (→). There are two types of rules: recursive rules, which point to a string, and terminal rules, which point to a move() function.
 
 Syntax
 -------------
 ### Declaration/Assignment
-Variables are declared and assigned in the same syntax as Java.
+Variables are declared and assigned in the same syntax as C.
 ```
     int a;
     a = 0;
@@ -40,15 +40,16 @@ Variables are declared and assigned in the same syntax as Java.
 - **string**: a collection of characters/symbols
 - **rule**: a standard object composed of 2 fields
  - a *predecessor* string and
- - a *successor* string
+ - a *successor* string or move() function
 - **lsys**: a standard object composed of three fields
- - a set called an *alphabet*
- - an *axiom* string
+ - an *init* string
  - a second set called *rules*
 
 ### Operators
+Mathematical and comparison operators are the same as in C (e.g. + - * /, < > ==).
 
 ### Control Flow
+If/else statements, while loops, and for loops are the same as in Java.
 
 ### Functions
 Functions have return values and parameters. They are defined with the keyword “func”, followed by the function name, parameters in parentheses, and brackets.
@@ -59,17 +60,13 @@ Functions have return values and parameters. They are defined with the keyword �
 ```
 
 ### Built-in Functions
+- **move** (int theta, int len) - draws a line of length len at an angle of theta
 - **draw** (lsys L) - generates a static fractal image
 - **grow** (lsys L) - generates a gif of the fractal being created
 - **zoom** (lsys L) - generates a (seemingly infinite) zooming gif of the fractal
 
 ### Comments
-Just like in Java - // for single line and /* */ for multi line comments.
-```
-    // I am a comment
-    /* and so
-        am I */
-```
+Just like in Java, // for single line and /* */ for multi line comments.
 
 Proposed Applications
 -------------
