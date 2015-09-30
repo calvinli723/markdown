@@ -12,11 +12,11 @@ Team
 
 Description
 -------------
-Our language enables the user to generate fractals in the Graphics Interchange Format, commonly abbreviated as GIF. Specifically, the user should be able to program a fractal using a type of formal grammar called an L-system.
+Our language enables the user to generate fractals in the Graphics Interchange Format, commonly abbreviated as GIF. Specifically, the user should be able to program a fractal using a formal grammar.
 
-We define L-system grammars as a tuple:
+We define our fractal-generating grammars as:
 ```
-    L = (alphabet, axiom, rules)
+    G = (init, rules)
 ```
 where
 
@@ -41,12 +41,30 @@ Variables are declared and assigned in the same syntax as C.
 - **rule**: a standard object composed of 2 fields
  - a *predecessor* string and
  - a *successor* string or move() function
-- **lsys**: a standard object composed of three fields
+- **gram**: a standard object composed of three fields
  - an *init* string
  - a second set called *rules*
 
+e.g. Consider the following grammar declaration for constructing a fractal:
+
+```
+    gram G {
+        init: ‘X’,
+        rules: { ‘X’ → ‘X up X down X’,
+                 ‘up’ → move(90, 1),
+                 ‘down’ → move(-90, 1),
+                 ‘X’→ move(0, 1)
+        }
+    }
+```
+
+### Structures
+**primitive**: fundamentally built into the language
+**object**: Javascript-like object with (key, value)
+**set**: unordered collection of objects or other data types
+
 ### Operators
-Mathematical and comparison operators are the same as in C (e.g. + - * /, < > ==).
+Mathematical and logical operators are the same as in C (e.g. + - * /, && ||, < > ==).
 
 ### Control Flow
 If/else statements, while loops, and for loops are the same as in Java.
@@ -78,18 +96,9 @@ Sample Programs
 ### Recursive Fibonacci algorithm
 ```
     func fib(int n) {
-        int sum;
-        int i;
-        if (n == 1) {
-            return 1;
+        if(n == 0 || n == 1) {
+            return n;
         }
-        if (n == 2) {
-            return 1;
-        }
-        sum = 1;
-        for (i = 2; i < n; i = i + 1) {
-            sum = sum + i;
-        }
-        return sum;
+        return fib(n-1) + fib(n-2);
     }
 ```
