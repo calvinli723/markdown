@@ -49,11 +49,11 @@ e.g. Consider the following grammar declaration:
 
 ```
 gram G = {
-    init: ‘X’,
-    rules: { ‘X’ → ‘X up X down X’,
-             ‘up’ → turn(90,
-             ‘down’ → turn(-90),
-             ‘X’ → move(1)
+    init: 'X',
+    rules: { 'X' → 'X up X down X',
+             'up’ → turn(90,
+             'down' → turn(-90),
+             'X' → move(1)
     }
 };
 ```
@@ -70,7 +70,7 @@ Mathematical and logical operators are the same as in C (e.g. + - * /, && ||, < 
 If/else statements, while loops, and for loops are the same as in Java.
 
 ### Functions
-Functions have return values and can take parameters. They are defined with the keyword “func”, followed by the function name, parameters contained in parentheses and separated by commas, and brackets.
+Functions have return values and can take parameters. They are defined with the keyword "func", followed by the function name, parameters contained in parentheses and separated by commas, and brackets.
 ```
 func add(a, b) {
     return a + b;
@@ -104,11 +104,11 @@ Sample Programs
  */
 
 gram koch = {
-    init: ‘F r r F r r F’,
-    rules: { ‘F’ → ‘F l F r r F l F’,
-             ‘r’ → turn(60),
-             ‘l' → turn(-60),
-             ‘F’ → move(1)
+    init: 'F r r F r r F',
+    rules: { 'F' → 'F l F r r F l F',
+             'r' → turn(60),
+             'l' → turn(-60),
+             'F' → move(1)
     }
 };
 
@@ -117,8 +117,6 @@ main() {
 }
 ```
 
-![what does this text do](/snowflake.png)
-
 ### Polyzygotic snowflakes
 ```
 /*
@@ -126,14 +124,14 @@ main() {
  * conjoined twins, triplets, etc. of your desired fractal!
  */
 
- gram koch = {
-     init: ‘F r r F r r F’,
-     rules: { ‘F’ → ‘F l F r r F l F’,
-              ‘r’ → turn(60),
-              ‘l' → turn(-60),
-              ‘F’ → move(1)
-     }
- };
+gram koch = {
+  init: 'F r r F r r F',
+  rules: { 'F' → 'F l F r r F l F',
+    'r' → turn(60),
+    'l' → turn(-60),
+    'F' → move(1)
+  }
+};
 
 func twin(gram g, int n) {
     string new_init = '';
@@ -148,5 +146,3 @@ main() {
   draw(twin(koch, 3), 4);
 }
 ```
-
-![what does this text do](/triplet-snowflake.png)
