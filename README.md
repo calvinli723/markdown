@@ -59,9 +59,9 @@ e.g. Consider the following grammar declaration for constructing a fractal:
 ```
 
 ### Structures
-**primitive**: fundamentally built into the language
-**object**: Javascript-like object with (key, value)
-**set**: unordered collection of objects or other data types
+- **primitive**: fundamentally built into the language
+- **object**: Javascript-like object with (key, value)
+- **set**: unordered collection of objects or other data types
 
 ### Operators
 Mathematical and logical operators are the same as in C (e.g. + - * /, && ||, < > ==).
