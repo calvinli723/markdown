@@ -16,7 +16,7 @@ Our language enables the user to generate fractals in the Graphics Interchange F
 
 We define our fractal-generating grammars as:
 ```
-    G = (init, rules)
+G = (init, rules)
 ```
 where
 
@@ -28,9 +28,9 @@ Syntax
 ### Declaration/Assignment
 Variables are declared and assigned in the same syntax as C.
 ```
-    int a;
-    a = 0;
-    int b = 1;
+int a;
+a = 0;
+int b = 1;
 ```
 
 ### Data Types
@@ -48,14 +48,14 @@ Variables are declared and assigned in the same syntax as C.
 e.g. Consider the following grammar declaration:
 
 ```
-    gram G = {
-        init: ‘X’,
-        rules: { ‘X’ → ‘X up X down X’,
-                 ‘up’ → turn(90,
-                 ‘down’ → turn(-90),
-                 ‘X’ → move(1)
-        }
-    };
+gram G = {
+    init: ‘X’,
+    rules: { ‘X’ → ‘X up X down X’,
+             ‘up’ → turn(90,
+             ‘down’ → turn(-90),
+             ‘X’ → move(1)
+    }
+};
 ```
 
 ### Structures
@@ -72,9 +72,9 @@ If/else statements, while loops, and for loops are the same as in Java.
 ### Functions
 Functions have return values and can take parameters. They are defined with the keyword “func”, followed by the function name, parameters contained in parentheses and separated by commas, and brackets.
 ```
-    func add(a, b) {
-        return a + b;
-    }
+func add(a, b) {
+    return a + b;
+}
 ```
 
 ### Built-in Functions
@@ -92,7 +92,7 @@ Proposed Applications
 -------------
 Since our language makes visualizing fractals and other iterative shapes simple, we see it being quite useful to mathematicians or curious students who wish to explore the world of recursive images with minimal programming experience. Furthermore, the ability to create GIFs with our language will result in not only the spread of fractal art, but will also help visual learners better understand the concept of the self-similar pattern.
 
-Additionally, because our language also supports Java-like control flow in addition to fractal-specific methods, users have the opportunity to be creative with how fractals can be manipulated. See sample program #2.
+Additionally, because our language also supports Java-like control flow in addition to fractal-specific methods, users have the opportunity to algorithmically manipulate fractals. See sample program #2.
 
 Sample Programs
 -------------
