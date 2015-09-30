@@ -145,7 +145,7 @@ func twin(gram g, int n) {
 }
 
 main() {
-  draw(twin(koch, 2), 4);
+  draw(twin(koch, 3), 4);
 }
 ```
 
